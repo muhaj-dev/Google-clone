@@ -6,7 +6,7 @@ const baseUrl = 'https://google-search3.p.rapidapi.com/api/v1';
 export const ResultContextProvider =  ({ children }) => {
     const [results, setResults] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
-    const [searchTerm, setSearchTerm] = useState('');
+    const [searchTerm, setSearchTerm] = useState('Allah');
 
     //videos, /search, /images to fetch 
     const getResults = async (type) => {
@@ -16,7 +16,7 @@ export const ResultContextProvider =  ({ children }) => {
             method: 'GET',
             headers: {
                 'X-User-Agent': 'desktop',
-                // 'X-Proxy-Location': 'EU',
+                'X-Proxy-Location': 'EU',
                 'X-RapidAPI-Host': 'google-search3.p.rapidapi.com',
                 'X-RapidAPI-Key': '1b7725303bmsh00e39e1fe2166d6p1084e9jsn476336c0f82a'
             }
@@ -24,12 +24,13 @@ export const ResultContextProvider =  ({ children }) => {
 
         const data = await response.json();
 
+        console.log(data)
         setResults(data);
         setIsLoading(false);
     }
 
     return (
-        <ResultContext.Provider value={{ getResults, results, searchTerm, setSearchTerm, isLoading, setIsLoading }}>
+        <ResultContext.Provider value={{ getResults, results, searchTerm, setSearchTerm, isLoading}}>
             {children}
         </ResultContext.Provider>
     )
