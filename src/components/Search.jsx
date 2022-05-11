@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 export const Search = () => {
   return (
-    <div>
+    <div className='bg-blue-400'>
       Search
       <Links />
     </div>
