@@ -6,7 +6,7 @@ const baseUrl = 'https://google-search3.p.rapidapi.com/api/v1';
 export const ResultContextProvider =  ({ children }) => {
     const [results, setResults] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
-    const [searchTerm, setSearchTerm] = useState('zuriInternship');
+    const [searchTerm, setSearchTerm] = useState('');
 
     //videos, /search, /images to fetch 
     const getResults = async (type) => {
@@ -28,7 +28,7 @@ export const ResultContextProvider =  ({ children }) => {
         if(type.includes('/news')) {
             setResults(data.entries)
         } else if(type.includes('/image')) {
-            setResults(data.images_results)
+            setResults(data.image_results)
         } else {
             setResults(data.results)
         }
