@@ -33,29 +33,3 @@ export const Search = () => {
     </div>
   );
 }
-
-
-// <form className="ui form" onSubmit={this.add}>
-// <div className="field">
-//         <label>Name</label>
-//         <input type="text" 
-//         name="name" 
-//         placeholder="Name"
-//         value={this.state.name}
-//         onChange={ (e) => this.setState({name: e.target.value})}/>
-//     </div>
-//     <div className="field">
-//         <label>Email</label>
-//         <input type="text" 
-//         name="email" 
-//         placeholder="Email"
-//         value={this.state.email}
-//         onChange={ (e) => this.setState({email: e.target.value})}
-//         />
-//     </div>
-//     <button className="ui button blue">
-//     <svg className="h-6 w-6 text-gray-400"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-// <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-// </svg>
-//     </button>
-// </form>
