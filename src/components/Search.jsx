@@ -8,7 +8,7 @@ export const Search = () => {
   const { setSearchTerm } = useResultContext();
   const [text, setText] = useState('');
   const [debouncedValue] = useDebounce(text, 300);
-  // const setText = setSearchTerm
+  
   useEffect(() => {
     if (debouncedValue) setSearchTerm(debouncedValue);
   }, [debouncedValue, setSearchTerm]);
